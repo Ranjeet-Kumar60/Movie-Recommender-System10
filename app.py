@@ -1,3 +1,5 @@
+import gdown
+import joblib
 import os
 import joblib
 import pandas as pd
@@ -11,7 +13,19 @@ app.secret_key = SECRET_KEY  # Secure secret key
 
 # Load Data
 filtered_movie = joblib.load("movie.joblib")  # Preprocessed movie dataset
-similarity = joblib.load("similarity.joblib")  # Precomputed similarity matrix
+
+similarity_file = "similarity.joblib"
+file_id = "1nijyuSOhetFdEGqXU0nMSs1ZMOBnkYKd"  # Replace with actual FILE_ID from Google Drive
+file_url = f"https://drive.google.com/uc?id={file_id}"
+
+# Download if file doesn't exist
+if not os.path.exists(similarity_file):
+    print("Downloading similarity.joblib from Google Drive...")
+    gdown.download(file_url, similarity_file, quiet=False)
+
+# Load the similarity matrix
+similarity = joblib.load(similarity_file)
+
 
 # Get movie list
 movie_list = filtered_movie['title_x'].tolist()
