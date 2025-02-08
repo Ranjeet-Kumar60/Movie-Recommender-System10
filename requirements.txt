@@ -1,8 +1,9 @@
-Flask
-pandas
-numpy
 requests
-scikit-learn
 joblib
-gunicorn
 python-dotenv
+pandas == 1.5.3
+scikit-learn == 1.2.2
+flask == 3.1.0
+flask-wtf == 1.2.1
+gunicorn == 23.0.0
+numpy == 1.26.4
