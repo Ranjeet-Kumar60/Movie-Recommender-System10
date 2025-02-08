@@ -58,12 +58,15 @@ pip install -r requirements.txt
 ```  
 📌 Example `requirements.txt`:  
 ```
-flask  
-joblib  
-pandas  
-requests  
-python-dotenv  
-scikit-learn  
+requests
+joblib
+python-dotenv
+pandas 
+scikit-learn 
+flask 
+gunicorn
+numpy 
+gdown
 ```  
 
 ### 3️⃣ Set Up Environment Variables  
@@ -109,13 +112,11 @@ Open your browser and visit:
 2. Click **"Recommend"** to get **5 movie recommendations** with posters.  
 
 ---  
+ 
 
-## 📌 Screenshots  
-### 🎥 Movie Selection  
-![Movie Selection](https://via.placeholder.com/600x300?text=Movie+Selection)  
+## 📌 Screenshots
+![Movie Selection](https://github.com/Ranjeet-Kumar60/Movie-Recommender-System10/blob/main/Screenshot_Movie_Recommendation.png)
 
-### 📌 Recommendations  
-![Recommendations](https://via.placeholder.com/600x300?text=Recommended+Movies)  
 
 ---  
 
